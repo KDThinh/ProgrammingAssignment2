@@ -2,8 +2,8 @@
 ## and calculate and store (or cache) its inverse matrix so that when the
 ## cacheSolve function is called again, it won't re-calculate the inverse
 ## matrix but just return the cached value.
-## If a new matrix is created, the old inverse matrix, which is cached, will turn
-## to be removed and turn to NULL, waiting for the inverse matrix to be stored 
+## If a new matrix is created, the old inverse matrix, which is cached, will 
+## be removed and turn to NULL, waiting for the inverse matrix to be stored 
 ## when the inverse calculation is called.
 
 
@@ -24,7 +24,7 @@ makeCacheMatrix <- function(x = matrix()) {
       x<<-y
       inv<<-NULL
     }
-    get<-function() {x}
+    get<-function() x
     setinv<-function(inverse) inv<<-inverse
     getinv<-function() inv
     list(set=set, get=get, setinv=setinv, getinv=getinv)
